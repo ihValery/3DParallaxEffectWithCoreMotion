@@ -11,6 +11,9 @@
 		80FB58752914620800F6469A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FB58742914620800F6469A /* ContentView.swift */; };
 		80FB58772914620900F6469A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80FB58762914620900F6469A /* Assets.xcassets */; };
 		80FB587A2914620900F6469A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80FB58792914620900F6469A /* Preview Assets.xcassets */; };
+		80FB58832915751E00F6469A /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FB58822915751E00F6469A /* Home.swift */; };
+		80FB58862915764600F6469A /* Draw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FB58852915764600F6469A /* Draw.swift */; };
+		80FB58882915815C00F6469A /* MotionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FB58872915815C00F6469A /* MotionManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,9 @@
 		80FB58742914620800F6469A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		80FB58762914620900F6469A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		80FB58792914620900F6469A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		80FB58822915751E00F6469A /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		80FB58852915764600F6469A /* Draw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Draw.swift; sourceTree = "<group>"; };
+		80FB58872915815C00F6469A /* MotionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +58,9 @@
 			isa = PBXGroup;
 			children = (
 				80FB58722914620800F6469A /* _DParallaxEffectWithCoreMotionApp.swift */,
+				80FB5884291575EF00F6469A /* Model */,
+				80FB58812915750100F6469A /* ViewModel */,
+				80FB5880291574D800F6469A /* View */,
 				80FB58742914620800F6469A /* ContentView.swift */,
 				80FB58762914620900F6469A /* Assets.xcassets */,
 				80FB58782914620900F6469A /* Preview Content */,
@@ -65,6 +74,30 @@
 				80FB58792914620900F6469A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		80FB5880291574D800F6469A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				80FB58822915751E00F6469A /* Home.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		80FB58812915750100F6469A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				80FB58872915815C00F6469A /* MotionManager.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		80FB5884291575EF00F6469A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				80FB58852915764600F6469A /* Draw.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +171,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				80FB58752914620800F6469A /* ContentView.swift in Sources */,
+				80FB58882915815C00F6469A /* MotionManager.swift in Sources */,
+				80FB58832915751E00F6469A /* Home.swift in Sources */,
 				80FB58732914620800F6469A /* _DParallaxEffectWithCoreMotionApp.swift in Sources */,
+				80FB58862915764600F6469A /* Draw.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,11 +306,13 @@
 				DEVELOPMENT_TEAM = 879U287R5Q;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Africa 3D";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -299,11 +337,13 @@
 				DEVELOPMENT_TEAM = 879U287R5Q;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Africa 3D";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
