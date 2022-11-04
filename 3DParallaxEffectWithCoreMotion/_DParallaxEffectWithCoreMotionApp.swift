@@ -11,7 +11,7 @@ import SwiftUI
 struct _DParallaxEffectWithCoreMotionApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            Home()
         }
     }
 }
