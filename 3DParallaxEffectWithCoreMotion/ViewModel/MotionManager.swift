@@ -13,8 +13,9 @@ class MotionManager: ObservableObject {
     // Motion Manager Properties
     @Published var manager: CMMotionManager = .init()
     
-    @Published var coordinateValue: CGFloat = 0
-//    @Published var yValue: CGFloat = 0
+    @Published var pitch: CGFloat = .zero
+    @Published var roll: CGFloat = .zero
+    @Published var yaw: CGFloat = .zero
     
     func detectMotion() {
         
@@ -25,8 +26,9 @@ class MotionManager: ObservableObject {
             
             manager.startDeviceMotionUpdates(to: .main) { [weak self] motion, error in
                 if let attitude = motion?.attitude {
-                    self?.coordinateValue = attitude.roll
-                    print(attitude.roll)
+                    self?.pitch = attitude.pitch
+                    self?.roll = attitude.roll
+                    self?.yaw = attitude.yaw
                 }
             }
         } else {

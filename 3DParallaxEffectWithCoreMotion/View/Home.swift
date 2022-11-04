@@ -15,29 +15,43 @@ struct Home: View {
             ZStack {
                 Image("Africa-1")
                     .resizable()
-/*
+
                 Image("Africa-2")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-//                    .offset(x: -motionManager.coordinateValue * 75, y: motionManager.coordinateValue * 75)
                     .opacity(0.4)
                     .blendMode(.multiply)
-                
+                    .offset(x: motionManager.pitch * 75,
+                            y: -motionManager.roll * 75)
+                    .animation(.interactiveSpring(), value: motionManager.pitch)
+
                 Image("Africa-3")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .offset(x: motionManager.coordinateValue * 7)
- */
-                Circle()
-                    .frame(width: 100, height: 100)
-                    .offset(x: -motionManager.coordinateValue * 75, y: motionManager.coordinateValue * 75)
+
                 
-                Circle()
-                    .frame(width: 100, height: 100)
+                ZStack {
+                    Image("Africa-1")
+                        .resizable()
+                        .frame(width: 80, height: 80)
+                        .mask(Circle().strokeBorder())
+                        .shadow(radius: 2)
+                    
+                    Image("Africa-1")
+                        .frame(width: 10, height: 10)
+                        .mask(Circle())
+                        .shadow(radius: 2)
+                        .offset(x: motionManager.pitch * 75,
+                                y: -motionManager.roll * 75)
+                }
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topTrailing)
+                .padding()
                 
                 VStack {
-                    Text("\(motionManager.coordinateValue)")
+                    Text("\(motionManager.pitch)")
+                    Text("\(motionManager.roll)")
                 }
+                .foregroundColor(.black)
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
                 .padding(.top)
             }
