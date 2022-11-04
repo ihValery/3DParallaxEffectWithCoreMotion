@@ -15,28 +15,34 @@ struct Home: View {
             ZStack {
                 Image("Africa-1")
                     .resizable()
-/*
+
                 Image("Africa-2")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-//                    .offset(x: -motionManager.coordinateValue * 75, y: motionManager.coordinateValue * 75)
+                    .offset(x: motionManager.pitch * 75,
+                            y: -motionManager.roll * 75)
                     .opacity(0.4)
                     .blendMode(.multiply)
                 
                 Image("Africa-3")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .offset(x: motionManager.coordinateValue * 7)
- */
-                Circle()
-                    .frame(width: 100, height: 100)
-                    .offset(x: -motionManager.coordinateValue * 75, y: motionManager.coordinateValue * 75)
+//                    .offset(x: motionManager.coordinateValue * 7)
                 
+                /*
+                Circle()
+                    .stroke(Color.green, style: StrokeStyle(lineWidth: 1, lineCap: .round, dash: [20, 25]))
+                    .frame(width: 99, height: 99)
+
                 Circle()
                     .frame(width: 100, height: 100)
+                    .offset(x: motionManager.pitch * 75,
+                            y: -motionManager.roll * 75)
+                 */
                 
                 VStack {
-                    Text("\(motionManager.coordinateValue)")
+                    Text("\(motionManager.pitch)")
+                    Text("\(motionManager.roll)")
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
                 .padding(.top)
