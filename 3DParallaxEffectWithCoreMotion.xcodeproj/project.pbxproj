@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		802818222915C2780070592B /* MotionIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802818212915C2780070592B /* MotionIndicator.swift */; };
 		80FB58732914620800F6469A /* _DParallaxEffectWithCoreMotionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FB58722914620800F6469A /* _DParallaxEffectWithCoreMotionApp.swift */; };
-		80FB58752914620800F6469A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FB58742914620800F6469A /* ContentView.swift */; };
 		80FB58772914620900F6469A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80FB58762914620900F6469A /* Assets.xcassets */; };
 		80FB587A2914620900F6469A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80FB58792914620900F6469A /* Preview Assets.xcassets */; };
 		80FB58832915751E00F6469A /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FB58822915751E00F6469A /* Home.swift */; };
@@ -17,9 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		802818212915C2780070592B /* MotionIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionIndicator.swift; sourceTree = "<group>"; };
 		80FB586F2914620800F6469A /* 3DParallaxEffectWithCoreMotion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 3DParallaxEffectWithCoreMotion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80FB58722914620800F6469A /* _DParallaxEffectWithCoreMotionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _DParallaxEffectWithCoreMotionApp.swift; sourceTree = "<group>"; };
-		80FB58742914620800F6469A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		80FB58762914620900F6469A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		80FB58792914620900F6469A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		80FB58822915751E00F6469A /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
@@ -61,7 +61,6 @@
 				80FB5884291575EF00F6469A /* Model */,
 				80FB58812915750100F6469A /* ViewModel */,
 				80FB5880291574D800F6469A /* View */,
-				80FB58742914620800F6469A /* ContentView.swift */,
 				80FB58762914620900F6469A /* Assets.xcassets */,
 				80FB58782914620900F6469A /* Preview Content */,
 			);
@@ -80,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				80FB58822915751E00F6469A /* Home.swift */,
+				802818212915C2780070592B /* MotionIndicator.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -170,7 +170,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				80FB58752914620800F6469A /* ContentView.swift in Sources */,
+				802818222915C2780070592B /* MotionIndicator.swift in Sources */,
 				80FB58882915815C00F6469A /* MotionManager.swift in Sources */,
 				80FB58832915751E00F6469A /* Home.swift in Sources */,
 				80FB58732914620800F6469A /* _DParallaxEffectWithCoreMotionApp.swift in Sources */,
