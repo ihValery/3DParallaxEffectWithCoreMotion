@@ -61,7 +61,7 @@ struct Home: View {
                 Image("Africa1Origenal")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .scaleEffect(1.01)
+                    .scaleEffect(1.0)
                     .offset(x: xValue * 10,
                             y: yValue * 10)
             }
