@@ -15,7 +15,6 @@ class MotionManager: ObservableObject {
     
     @Published var pitch: CGFloat = .zero
     @Published var roll: CGFloat = .zero
-    @Published var yaw: CGFloat = .zero
     
     func detectMotion() {
         
@@ -28,7 +27,6 @@ class MotionManager: ObservableObject {
                 if let attitude = motion?.attitude {
                     self?.pitch = attitude.pitch
                     self?.roll = attitude.roll
-                    self?.yaw = attitude.yaw
                 }
             }
         } else {

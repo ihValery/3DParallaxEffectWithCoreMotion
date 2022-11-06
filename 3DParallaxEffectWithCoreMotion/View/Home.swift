@@ -10,6 +10,12 @@ import SwiftUI
 struct Home: View {
     
     @StateObject var motionManager: MotionManager = .init()
+    private var xValue: Double {
+        motionManager.pitch
+    }
+    private var yValue: Double {
+        -motionManager.roll - 0.87
+    }
     
     var body: some View {
             ZStack {
@@ -21,49 +27,54 @@ struct Home: View {
                     .aspectRatio(contentMode: .fit)
                     .opacity(0.4)
                     .blendMode(.multiply)
-                    .offset(x: motionManager.pitch * 20,
-                            y: -motionManager.roll * 20)
+                    .offset(x: xValue * 20,
+                            y: yValue * 20)
                 
                 Image("Africa3Origenal")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .offset(x: motionManager.pitch * 25,
-                            y: -motionManager.roll * 25)
+                    .offset(x: xValue * 25,
+                            y: yValue * 25)
                 
                 Image("Africa2Shadow")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .opacity(0.4)
                     .blendMode(.multiply)
-                    .offset(x: motionManager.pitch * 45,
-                            y: -motionManager.roll * 45)
+                    .offset(x: xValue * 45,
+                            y: yValue * 45)
                 
                 Image("Africa2Origenal")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .offset(x: motionManager.pitch * 35,
-                            y: -motionManager.roll * 35)
+                    .offset(x: xValue * 35,
+                            y: yValue * 35)
 
                 Image("Africa1Shadow")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .opacity(0.4)
                     .blendMode(.multiply)
-                    .offset(x: motionManager.pitch * 75,
-                            y: -motionManager.roll * 75)
+                    .offset(x: xValue * 75,
+                            y: yValue * 75)
 
                 Image("Africa1Origenal")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-//                    .offset(x: motionManager.pitch * 10,
-//                            y: -motionManager.roll * 10)
+                    .scaleEffect(1.0)
+                    .offset(x: xValue * 10,
+                            y: yValue * 10)
             }
-            .animation(.interactiveSpring(), value: motionManager.pitch)
+            .animation(.interactiveSpring(), value: xValue)
             .overlay(alignment: .topTrailing) {
-                MotionIndicator(xValue: motionManager.pitch * 75,
-                                yValue: -motionManager.roll * 75)
+                MotionIndicator(xValue: xValue * 75,
+                                yValue: yValue * 75)
                 .padding(.top, 5)
             }
+//            .overlay(alignment: .top) {
+//                Text("\(motionManager.pitch) \n \(motionManager.roll)")
+//                    .foregroundColor(.black)
+//            }
             .ignoresSafeArea()
             .onAppear(perform: motionManager.detectMotion)
     }
