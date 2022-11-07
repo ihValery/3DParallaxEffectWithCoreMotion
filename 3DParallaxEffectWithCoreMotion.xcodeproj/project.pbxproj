@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		802818222915C2780070592B /* MotionIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802818212915C2780070592B /* MotionIndicator.swift */; };
 		802818242917F1D70070592B /* PlaceholderStartWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802818232917F1D70070592B /* PlaceholderStartWork.swift */; };
+		8028182A291946D70070592B /* One3DCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80281829291946D70070592B /* One3DCard.swift */; };
 		80FB58732914620800F6469A /* _DParallaxEffectWithCoreMotionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FB58722914620800F6469A /* _DParallaxEffectWithCoreMotionApp.swift */; };
 		80FB58772914620900F6469A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80FB58762914620900F6469A /* Assets.xcassets */; };
 		80FB587A2914620900F6469A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80FB58792914620900F6469A /* Preview Assets.xcassets */; };
@@ -20,6 +21,7 @@
 /* Begin PBXFileReference section */
 		802818212915C2780070592B /* MotionIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionIndicator.swift; sourceTree = "<group>"; };
 		802818232917F1D70070592B /* PlaceholderStartWork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderStartWork.swift; sourceTree = "<group>"; };
+		80281829291946D70070592B /* One3DCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = One3DCard.swift; sourceTree = "<group>"; };
 		80FB586F2914620800F6469A /* 3DParallaxEffectWithCoreMotion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 3DParallaxEffectWithCoreMotion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80FB58722914620800F6469A /* _DParallaxEffectWithCoreMotionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _DParallaxEffectWithCoreMotionApp.swift; sourceTree = "<group>"; };
 		80FB58762914620900F6469A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				80FB58822915751E00F6469A /* Home.swift */,
+				80281829291946D70070592B /* One3DCard.swift */,
 				802818232917F1D70070592B /* PlaceholderStartWork.swift */,
 				802818212915C2780070592B /* MotionIndicator.swift */,
 			);
@@ -178,6 +181,7 @@
 				80FB58882915815C00F6469A /* MotionManager.swift in Sources */,
 				80FB58832915751E00F6469A /* Home.swift in Sources */,
 				80FB58732914620800F6469A /* _DParallaxEffectWithCoreMotionApp.swift in Sources */,
+				8028182A291946D70070592B /* One3DCard.swift in Sources */,
 				80FB58862915764600F6469A /* Draw.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
