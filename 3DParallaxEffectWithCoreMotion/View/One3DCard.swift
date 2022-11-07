@@ -82,6 +82,8 @@ struct One3DCard_Previews: PreviewProvider {
     }
 }
 
+//MARK: - DefaultImage
+
 fileprivate struct DefaultImage: View {
     
     //MARK: Properties
@@ -97,7 +99,10 @@ fileprivate struct DefaultImage: View {
     //MARK: Body
 
     var body: some View {
-        Text("11")
+        Image(imageName)
+            .resizable()
+            .aspectRatio(contentMode: .fit)
+            .opacity(0.4)
+            .blendMode(.multiply)
     }
 }
-
