@@ -11,7 +11,8 @@ import SwiftUI
 struct _DParallaxEffectWithCoreMotionApp: App {
     var body: some Scene {
         WindowGroup {
-            Home()
+//            Home()
+            SwipeToNext()
         }
     }
 }
