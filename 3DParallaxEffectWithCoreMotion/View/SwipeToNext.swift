@@ -17,33 +17,65 @@ struct SwipeToNext: View {
     @State private var fingerLocation: CGPoint?
     @GestureState private var isDragging = false
     
+    @State private var circleLocation: CGPoint?
+    
     var body: some View {
-        VStack {
-            Text("\(isDragging.description)")
+        ZStack {
+            Text("Шлейф")
+                .font(.title)
+                .fontWidth(.expanded)
             
-            ZStack {
-                Color.green
-                    .gesture(
-                        DragGesture(minimumDistance: 0.1)
-                            .updating($isDragging, body: { value, state, transaction in
-                                state = true
-                                fingerLocation = value.location
-                            })
-                            .onEnded({ _ in
-                                fingerLocation = nil
-                            })
-                    )
-                
-                if let fingerLocation = fingerLocation {
-                    RoundedRectangle(cornerRadius: 50)
-//                    Circle()
-                        .stroke(.red, lineWidth: 2)
-                        .frame(width: 45, height: 45 + location.x)
-                        .position(fingerLocation)
-                }
-
+            if let circleLocation = circleLocation {
+                Circle()
+                    .fill(.red)
+                    .frame(width: 80, height: 80)
+                    .position(circleLocation)
             }
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(.white)
+        
+        .onTapGesture { location in
+            circleLocation = location
+            print("\(location.debugDescription)")
+        }
+        
+        
+        
+        
+        
+        
+        
+//        VStack {
+//            Text("\(isDragging.description)")
+//
+//            ZStack {
+//                Color.green
+//                    .gesture(
+//                        DragGesture(minimumDistance: 0.1)
+//                            .updating($isDragging, body: { value, state, transaction in
+//                                state = true
+//                            })
+//                            .onChanged({ value in
+//                                location = value.location
+//                                fingerLocation = value.location
+//                            })
+//                            .onEnded({ _ in
+//                                fingerLocation = nil
+//                                location = .zero
+//                            })
+//                    )
+//
+//                if let fingerLocation = fingerLocation {
+//                    RoundedRectangle(cornerRadius: 50)
+////                    Circle()
+//                        .stroke(.red, lineWidth: 2)
+//                        .frame(width: 45, height: 45 + location.y)
+//                        .position(fingerLocation)
+//                }
+//
+//            }
+//        }
         
 //        ZStack {
 //            RoundedRectangle(cornerRadius: 15)
