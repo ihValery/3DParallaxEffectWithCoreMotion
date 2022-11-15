@@ -10,16 +10,39 @@ import SwiftUI
 //MARK: - SwipeToNext
 
 struct SwipeToNext: View {
+//
+    @GestureState private var isTapped = false
+//
+//        var body: some View {
+//
+//            let tap = DragGesture(minimumDistance: 0)
+//                .updating($isTapped) { (_, isTapped, _) in
+//                    isTapped = true
+//                }
+//
+//            return Text("Tap me!")
+//                .foregroundColor(isTapped ? .red: .black)
+//                .gesture(tap)
+//        }
+//    }
     
     //MARK: Properties
-    
+
     @State private var location: CGPoint = .zero
     @State private var fingerLocation: CGPoint?
     @GestureState private var isDragging = false
-    
+
     @State private var circleLocation: CGPoint?
-    
+
     var body: some View {
+        let tap = DragGesture(minimumDistance: 0)
+            .updating($isTapped) { (value, isTapped, _) in
+                isTapped = true
+            }
+            .onChanged { value in
+                circleLocation = value.location
+            }
+        
         ZStack {
             Text("Шлейф")
                 .font(.title)
@@ -34,11 +57,16 @@ struct SwipeToNext: View {
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(.white)
+        .gesture(tap)
         
-        .onTapGesture { location in
-            circleLocation = location
-            print("\(location.debugDescription)")
-        }
+        
+    
+
+        
+//        .onTapGesture(coordinateSpace: .global) { location in
+//            circleLocation = location
+//            print("\(location.debugDescription)")
+//        }
         
         
         
