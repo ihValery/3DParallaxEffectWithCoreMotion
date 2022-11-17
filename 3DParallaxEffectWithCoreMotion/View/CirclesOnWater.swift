@@ -14,6 +14,8 @@ struct CirclesOnWater: View {
     //MARK: Properties
     
     @State private var isOn: Bool = false
+    @State private var isFinishAnimation: Bool = false
+    @State private var isScaleAnimation: Bool = false
 
     //MARK: Body
 
@@ -22,12 +24,15 @@ struct CirclesOnWater: View {
             Spacer()
             
             Circle()
-                .stroke(.gray, lineWidth: isOn ? 1 : 100)
+                .stroke(.gray, lineWidth: isOn ? 1 : 110)
                 .frame(width: 90, height: 90)
-                .scaleEffect(isOn ? 1 : 0)
+                .scaleEffect(isScaleAnimation ? 1 : 0)
                 .opacity(isOn ? 1 : 0)
+                .opacity(isFinishAnimation ? 0 : 1)
             
                 .animation(.easeInOut(duration: 1.3), value: isOn)
+                .animation(.easeOut, value: isFinishAnimation)
+                .animation(.easeOut(duration: 2), value: isScaleAnimation)
             
 
             Spacer()
@@ -39,9 +44,10 @@ struct CirclesOnWater: View {
     private func buttonStart() -> some View {
         Button {
             isOn.toggle()
+            isScaleAnimation.toggle()
             
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                isOn.toggle()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                isFinishAnimation.toggle()
             }
             
         } label: {
