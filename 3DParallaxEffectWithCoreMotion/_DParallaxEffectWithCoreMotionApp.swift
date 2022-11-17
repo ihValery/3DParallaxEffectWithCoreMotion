@@ -12,7 +12,8 @@ struct _DParallaxEffectWithCoreMotionApp: App {
     var body: some Scene {
         WindowGroup {
 //            Home()
-            SwipeToNext()
+//            SwipeToNext()
+            CirclesOnWater()
         }
     }
 }

@@ -36,7 +36,7 @@ struct SwipeToNext: View {
 
     var body: some View {
         let tap = DragGesture(minimumDistance: 0)
-            .updating($isTapped) { (value, isTapped, _) in
+            .updating($isTapped) { (_, isTapped, _) in
                 isTapped = true
             }
             .onChanged { value in
@@ -48,6 +48,7 @@ struct SwipeToNext: View {
                 .font(.title)
                 .fontWidth(.expanded)
             
+//            if isTapped,
             if let circleLocation = circleLocation {
                 Circle()
                     .fill(.red)
