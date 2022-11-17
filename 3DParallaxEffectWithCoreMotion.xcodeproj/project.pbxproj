@@ -10,6 +10,7 @@
 		802818222915C2780070592B /* MotionIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802818212915C2780070592B /* MotionIndicator.swift */; };
 		802818242917F1D70070592B /* PlaceholderStartWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802818232917F1D70070592B /* PlaceholderStartWork.swift */; };
 		8028182A291946D70070592B /* One3DCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80281829291946D70070592B /* One3DCard.swift */; };
+		802A717C292668DF00C700EA /* CirclesOnWater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802A717B292668DF00C700EA /* CirclesOnWater.swift */; };
 		80DD8D6B291FB94A00A10502 /* SwipeToNext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DD8D6A291FB94A00A10502 /* SwipeToNext.swift */; };
 		80FB58732914620800F6469A /* _DParallaxEffectWithCoreMotionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FB58722914620800F6469A /* _DParallaxEffectWithCoreMotionApp.swift */; };
 		80FB58772914620900F6469A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80FB58762914620900F6469A /* Assets.xcassets */; };
@@ -23,6 +24,7 @@
 		802818212915C2780070592B /* MotionIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionIndicator.swift; sourceTree = "<group>"; };
 		802818232917F1D70070592B /* PlaceholderStartWork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderStartWork.swift; sourceTree = "<group>"; };
 		80281829291946D70070592B /* One3DCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = One3DCard.swift; sourceTree = "<group>"; };
+		802A717B292668DF00C700EA /* CirclesOnWater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CirclesOnWater.swift; sourceTree = "<group>"; };
 		80DD8D6A291FB94A00A10502 /* SwipeToNext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeToNext.swift; sourceTree = "<group>"; };
 		80FB586F2914620800F6469A /* 3DParallaxEffectWithCoreMotion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 3DParallaxEffectWithCoreMotion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80FB58722914620800F6469A /* _DParallaxEffectWithCoreMotionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _DParallaxEffectWithCoreMotionApp.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 				802818232917F1D70070592B /* PlaceholderStartWork.swift */,
 				802818212915C2780070592B /* MotionIndicator.swift */,
 				80DD8D6A291FB94A00A10502 /* SwipeToNext.swift */,
+				802A717B292668DF00C700EA /* CirclesOnWater.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -184,6 +187,7 @@
 				80FB58882915815C00F6469A /* MotionManager.swift in Sources */,
 				80FB58832915751E00F6469A /* Home.swift in Sources */,
 				80FB58732914620800F6469A /* _DParallaxEffectWithCoreMotionApp.swift in Sources */,
+				802A717C292668DF00C700EA /* CirclesOnWater.swift in Sources */,
 				8028182A291946D70070592B /* One3DCard.swift in Sources */,
 				80DD8D6B291FB94A00A10502 /* SwipeToNext.swift in Sources */,
 				80FB58862915764600F6469A /* Draw.swift in Sources */,
